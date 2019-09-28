@@ -113,7 +113,7 @@ def run():
         print("OK" if correct else "FAIL")
         num_correct += 1 if correct else 0
 
-    print("{0} of {1} correct {2:.2f}%".format(num_correct, num_tests, num_correct/num_tests))
+    print("{0} of {1} correct {2:.2f}%".format(num_correct, num_tests, 100 * (num_correct/num_tests)))
 
     node_names = {-1: 'input', -2: 'gate', 0: 'output'}
     visualize.draw_net(config, winner, True, node_names=node_names)
